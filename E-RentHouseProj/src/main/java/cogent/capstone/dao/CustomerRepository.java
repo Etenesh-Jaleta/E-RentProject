@@ -3,9 +3,9 @@ package cogent.capstone.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import cogent.capstone.modules.Property;
+import cogent.capstone.modules.Customer;
 
-@RepositoryRestResource
-public interface PropertyDao extends JpaRepository<Property, Integer> {
+@RepositoryRestResource()
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
 }
