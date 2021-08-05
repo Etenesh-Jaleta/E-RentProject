@@ -1,5 +1,7 @@
 package cogent.capstone.modules;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,14 +16,16 @@ import lombok.Data;
 @Data
 public class Property {
 	@Id
-	private int propertyId;
-	@Column
-	private String propertyAddress;
-	@Column
-	private int propertyBuiltYear;
-
+	@Column(name = "propertyid")
+	private int PropertyId;
+	@Column(name = "propertyaddress")
+	private String PropertyAddress;
+	@Column(name = "propertybuiltyear")
+	private Date PropertyBuiltYear;
+	@Column(name = "price")
+	private double price;
 	@OneToOne
-	@JoinColumn(name = "ownerId", nullable = false)
-	@RestResource(path = "ownerProperty", rel = "ownerId")
-	private Owner ownerId;
+	@JoinColumn(name = "ownerid", nullable = false)
+	@RestResource(path = "ownerProperty", rel = "OwnerId")
+	private Owner OwnerId;
 }

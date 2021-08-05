@@ -12,13 +12,14 @@ import lombok.Data;
 @Table(name = "brokers")
 public class Broker {
 	@Id
-	private int brokerId;
-	@Column
-	private String brokerName;
-	@Column
-	private String brokerEmail;
-	@Column
-	private String brokerPhoneNumber;
-	@Column
-	private String brokerLicenseNumber;
+	@Column(name = "brokerid")
+	private int BrokerId;
+	@Column(name = "brokername")
+	private String BrokerName;
+	@Column(name = "brokeremail")
+	private String BrokerEmail;
+	@Column(name = "brokerphonenumber")
+	private String BrokerPhoneNumber;
+	@Column(name = "brokerlicensenumber")
+	private String BrokerLicenseNumber;
 }

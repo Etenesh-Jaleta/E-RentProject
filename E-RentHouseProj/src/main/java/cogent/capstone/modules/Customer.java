@@ -12,12 +12,13 @@ import lombok.Data;
 @Table(name = "customers")
 public class Customer {
 	@Id
-	private int customerId;
-	@Column
-	private String customerName;
-	@Column
-	private String customerEmail;
-	@Column
-	private String customerPhone;
+	@Column(name = "customerid")
+	private int CustomerId;
+	@Column(name = "customername")
+	private String CustomerName;
+	@Column(name = "customeremail")
+	private String CustomerEmail;
+	@Column(name = "customerphonenumber")
+	private String CustomerPhone;
 
 }

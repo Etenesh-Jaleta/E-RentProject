@@ -13,13 +13,14 @@ import lombok.Data;
 @Table(name = "owners")
 public class Owner {
 	@Id
-	private int ownerId;
-	@Column
-	private String ownerName;
-	@Column
-	private String ownerEmail;
-	@Column
-	private String ownerPhoneNumber;
-	@OneToOne(mappedBy = "ownerId")
+	@Column(name = "ownerid")
+	private int OwnerId;
+	@Column(name = "ownername")
+	private String OwnerName;
+	@Column(name = "owneremail")
+	private String OwnerEmail;
+	@Column(name = "ownerphonenumber")
+	private String OwnerPhoneNumber;
+	@OneToOne(mappedBy = "OwnerId")
 	private Property property;
 }
