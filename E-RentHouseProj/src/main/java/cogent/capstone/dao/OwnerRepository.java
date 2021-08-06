@@ -5,6 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import cogent.capstone.modules.Owner;
 
+//@CrossOrigin("http://localhost:1053")
 @RepositoryRestResource()
 public interface OwnerRepository extends JpaRepository<Owner, Integer> {
 
